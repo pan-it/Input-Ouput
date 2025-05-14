@@ -1,0 +1,17 @@
+<app-numero-aleatorio
+  [numeroMax]="20"
+  [numeroMin]="1"
+  (resultado)="gerar($event)"
+></app-numero-aleatorio>
+<!--
+  !Comunicação de pai para filho!
+  [numeroMax] e [numeroMin] -> deixa que o seu valor seja definido pelo seu componente pai
+-->
+
+<!--
+  !Comunicação de filho para pai!
+  (resultado) -> eventEmitter, quando acionado emite um valor
+  gerar($event) -> função que recebe valor e o coloca em uma variável
+-->
+<p>{{numero}}</p>
+
